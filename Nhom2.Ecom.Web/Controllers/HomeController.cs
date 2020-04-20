@@ -12,7 +12,7 @@ namespace Nhom2.Ecom.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        //Add comment
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
