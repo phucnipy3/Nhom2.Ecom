@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nhom2.Ecom.Common\Nhom2.Ecom.Common.csproj" />
+    <ProjectReference Include="..\Nhom2.Ecom.Data\Nhom2.Ecom.Data.csproj" />
+  </ItemGroup>
+
+
+
+</Project>
