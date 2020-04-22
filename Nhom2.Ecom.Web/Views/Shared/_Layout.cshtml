@@ -1,48 +1,235 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Nhom2.Ecom.Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharah Shop</title>
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/global.css" />
+    <link rel="stylesheet" href="~/css/styleHeader.css" />
+    @RenderSection("css", false)
+    <link rel="stylesheet" href="~/css/styleFooter.css" />
+    <link href="http://fonts.googleapis.com/css?family=Proza+Libre:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800&amp;display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Nhom2.Ecom.Web</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+    <section class="banner-section">
+        <div class="banner-inner section-padding">
+            <div class="widget">
+                <header id="header">
+                    <div class="header-pc">
+                        <div class="header-pc_left">
+                            <a href="index.html" class="logo">
+                                <img src="~/images/logo2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="header-pc_right">
+                            <div class="header-top">
+                                <div class="header-top_left">
+                                    <div class="shipping-txt">
+                                        <h3>GIAO HÀNG MIỄN PHÍ</h3>
+                                        <p>Với hóa đơn trên 500.000</p>
+                                    </div>
+                                </div>
+                                <div class="header-top_right">
+                                    <div class="shipping-txt">
+                                        <span><img src="assets/images/get-in-tuch.png" alt="" style="margin-right: 18px">LIÊN HỆ: </span>
+                                        <span class="hightline">19001010</span>
+                                        <p>Chào mừng bạn đến với SARAH SHOP!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-bottom">
+                                <form action="">
+                                    <div class="controll">
+                                        <select name="" id="">
+                                            <option value="">Nhóm sản phẩm</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                        <div style="display: flex;">
+                                            <input type="text" placeholder="Nhập từ khóa tìm kiếm">
+                                            <button type="submit">
+                                                <span><i class="fa fa-search"></i></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <div id="main-menu" class="widget">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="shop.html">Cửa hàng</a></li>
+                        <li><a href="blog.html">Bài viết</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
                     </ul>
+                </nav>
+                <div class="cart">
+                    <a href="#">
+                        Giỏ hàng
+                        <span>10</span>
+                    </a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        </div>
+    </section>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Nhom2.Ecom.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    @RenderBody()
+
+    <section class="service-section">
+        <div class="service-inner section-padding">
+            <div class="widget">
+                <div class="services">
+                    <div class="service-box">
+                        <h3><i class="fa fa-truc"></i>Miễn phí vận chuyển</h3>
+                        <span>Cho đơn đặt hàng hơn 2 triệu VNĐ</span>
+                    </div>
+                    <div class="service-box">
+                        <h3><i class="fa fa-cog"></i>Hoàn tiền 100% mua hàng</h3>
+                        <span>Trong vòng 7 ngày</span>
+                    </div>
+                    <div class="service-box">
+                        <h3><i class="fa fa-phone"></i>Đặt hàng trực tuyến</h3>
+                        <span>SĐT: (84) 1234 432 762</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner section-padding">
+            <div class="widget">
+                <div class="footer-top">
+                    <div class="footer-menu">
+                        <h3>Thông tin hỗ trợ</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Tìm hiểu về mua trả góp
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Tìm trung tâm bảo hành hãng
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Hướng dẫn mua hàng online
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Giao hàng và thanh toán
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Dịch vụ khách hàng</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Giới thiệu về công ty
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Gởi góp ý & khiếu nại
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Tư vấn
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Liên hệ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Dịch vụ & Hỗ trợ</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    Chính sách giao hàng
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Chính sách đổi trả
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Chính sách bảo hành
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Chính sách trả góp
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Bản tin</h3>
+                        <p>Đăng ký thành viên để nhận bản tin mỗi ngày</p>
+                        <form action="">
+                            <div class="controll">
+                                <div style="display: flex;">
+                                    <input type="text" placeholder="Nhập email của bạn" style="width: 75%; font-size: 14px;">
+                                    <button type="submit" style="width: 25%">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="logo">
+                        <img src="~/images/logo1.png" alt="logo">
+                    </div>
+                    <div class="address">
+                        <p><i class="fa fa-map-marker">&nbsp;</i> - Địa chỉ: 01 Võ Văn Ngân, phường Bình Thọ, quận Thủ Đức, TP Hồ Chí Minh</p>
+                        <p><i class="fa fa-phone">&nbsp;</i> - Điện thoại: (84) 1234 234 789</p>
+                        <p><i class="fa fa-envelope">&nbsp;</i> - Địa chỉ email: (info@gmail.com</p>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li class="facebook">
+                                <a target="_blank" href="e" class="fa fa-facebook"></a>
+                            </li>
+                            <li class="twitter">
+                                <a class="fa fa-twitter" target="_blank" href="d"></a>
+                            </li>
+                            <li class="google-plus">
+                                <a class="fa fa-google-plus" target="_blank" href="c"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-source">
+                    <p>© Bản quyền thuộc về <a href="" target="_blank">Nobita</a>. Cung cấp bởi <a href="" target="_blank">Haravan</a>.</p>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
 </body>
 </html>
