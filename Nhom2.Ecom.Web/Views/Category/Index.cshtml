@@ -1,0 +1,1024 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section css{
+    <link rel="stylesheet" href="~/css/styleShop.css">
+}
+
+@section jquery{
+    <script src="/js/jquuery-3.3.3.min.js"></script>
+    <script src="~/js/jsShop.js"></script>
+}
+
+
+
+<section class="breadcrumb-section">
+    <div class="widget">
+        <div class="breadcrumb-inner">
+            <ul>
+                <li class="home"><a href=""><i class="fa fa-home"></i>Home</a></li>
+
+                <li><i class="fa fa-angle-right"></i><a href="">Thời trang nữ</a></li>
+                <li><i class="fa fa-angle-right"></i><a href="">Áo Polo</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="pecial-content-section">
+    <div class="widget">
+        <div class="content-inner section-padding">
+            <div class="content-left">
+                <div class="sidebar">
+                    <div class="filter-box">
+                        <div class="title-filter">
+                            <h1>Gía</h1>
+                        </div>
+                        <div class="box-range">
+                            <div id="range">
+                                <div id="val"></div>
+                                <span id="range-left"></span>
+                                <span id="range-right"></span>
+                            </div>
+                            <div class="val">
+                                <span id="min-price">0.00$</span>
+                                <span id="max-price">100.00$</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-box">
+                        <div class="title-filter">
+                            <h1>Nổi bật</h1>
+                        </div>
+
+                        <div class="content-filter">
+                            <input type="checkbox" name="feature" value="" id="fea1"/>
+                            <input type="checkbox" name="feature" value="" id="fea2"/>
+                            <input type="checkbox" name="feature" value="" id="fea3"/>
+                            <input type="checkbox" name="feature" value="" id="fea4"/>
+                            <input type="checkbox" name="feature" value="" id="fea5"/>
+                            <input type="checkbox" name="feature" value="" id="fea6"/>
+                            <input type="checkbox" name="feature" value="" id="fea7"/>
+
+                            <ul class="lst-feature">
+                                <li>
+                                     <label for="fea1">
+                                         <div>
+                                             <span class="label">Màu sắc</span>
+                                             <i class="fa fa-angle-right"></i>
+                                         </div>
+                                    </label>
+
+
+                                    <div class="hidden-box">
+                                        <div class="lst-detail-fea grid-3">
+                                            <div>
+                                                <input type="checkbox" data-color="yellow">
+                                                <label for="">Vàng</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" data-color="red">
+                                                <label for="">Đỏ</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" data-color="brown">
+                                                <label for="">Nâu</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" data-color="grey">
+                                                <label for="">Xám</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" data-color="white">
+                                                <label for="">Trắng</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <label for="fea2">
+                                        <div>
+                                            <span>Chất liệu</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </label>
+
+                                    <div class="hidden-box">
+                                        <div class="lst-detail-fea grid-2">
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Vải Coton</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Vải Kaki</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Vải Kate</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Vải len</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Vải lụa</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <label for="fea3">
+                                        <div>
+                                            <span>Áo thun</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </label>
+                                    <div class="hidden-box">
+                                        <div class="lst-detail-fea grid-1">
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Nhiều màu cổ tròn</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Nhiều màu tay dài và tay lỡ</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Đính đá hoặc phối ren ở cổ</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Phong cách Hàn Quốc</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Họa tiết 3D nhiều màu</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <label for="fea4">
+                                        <div>
+                                            <span>Áo sơ mi</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </label>
+                                    <div class="hidden-box">
+                                        <div class="lst-detail-fea grid-1">
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Áo sơ mi trắng</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Áo sơ mi Hàn Quốc</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Áo sơ mi cổ chữ V</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Áo sơ mi trễ vai</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Áo sơ mi sát nách</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Áo sơ mi cổ tròn ngây thơ</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Sơ mi cổ thắt nơ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <label for="fea5">
+                                        <div>
+                                            <span>Quần jeans</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </label>
+                                    <div class="hidden-box">
+                                        <div class="lst-detail-fea grid-1">
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần Jean Ống Đứng</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần Jean Skinny</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần Jean Boyfriend</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần jean girlfriend</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Mom’s jean</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần jean ống rộng</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần Short Jean</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <label for="fea6">
+                                        <div>
+                                            <span>Quần short</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </label>
+                                    <div class="hidden-box">
+                                        <div class="lst-detail-fea grid-1">
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần short jean</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần short kaki</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần short ống rộng</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần short ren</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần short giả váy</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần short vải co giãn</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Quần short đơn sắc</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <label for="fea7">
+                                        <div>
+                                            <span>Chân váy</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </label>
+                                    <div class="hidden-box">
+                                        <div class="lst-detail-fea grid-1">
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy xòe dài công sở</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy voan công sở</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy yếm công sở</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy ôm công sở</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy maxi công sở</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy suông công sở</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy chữ a công sở</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy bút chì công sở</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label for="">Chân váy dáng dài công sở</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="content-filter">
+                            <div class="filter">
+                                <button id="filter">Tìm kiếm</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="content-right">
+                <div class="cate-banner">
+                    <img src="/images/cate-banner1.png" alt="">
+                </div>
+
+                <div class="product-res">
+                    <div class="res-title">
+                        <h3>Kết quả tìm kiếm: có <span>5</span> sản phẩm</h3>
+                    </div>
+
+                    <input type="radio" name="view-mode" id="mode1">
+                    <input type="radio" name="view-mode" id="mode2" checked="checked">
+
+                    <div class="res-control">
+                        <div class="show-grid">
+                            <ul class="view-mode">
+                                <li class="view-grid">
+                                    <label for="mode1"><a></a></label>
+                                </li>
+                                <li class="view-grid">
+                                    <label for="mode2"><a></a></label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="show-short">
+                            <select name="" id="">
+                                <option value="">Sắp theo giá</option>
+                                <option value="">Sắp theo giá (giảm dần)</option>
+                                <option value="">Sắp theo ngày</option>
+                                <option value="">Sắp theo đánh giá</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="lst-res-1" class="lst-res section-padding">
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong2.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view" class="">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong5.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong4.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong3.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong1.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong9.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong10.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong11.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <img src="/images/DoNu/aophong12.jpg" alt="">
+                                    <ul class="icon">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-pro">
+                                    <h2 class="title-pro">Áo nữ thời trang</h2>
+                                    <span><del>25.00$</del>20.00$</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="lst-res-2" class="lst-res section-padding">
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <a href=""><img src="/images/DoNu/aophong9.jpg" width="300" height="300" alt=""></a>
+
+                                </div>
+                                <div class="content-pro">
+                                    <a href=""><h2 class="title-pro">Áo nữ thời trang</h2></a>
+
+                                    <span><del>25.00$</del>20.00$</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quod, ipsam? Consequuntur tenetur error eveniet dolorum iste commodi facilis soluta, sint dignissimos nemo provident beatae, et laborum omnis cum. Corrupti vitae neque </p>
+                                    <ul class="icon2">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <a href=""><img src="/images/DoNu/aophong8.jpg" width="300" height="300" alt=""></a>
+
+                                </div>
+                                <div class="content-pro">
+                                    <a href=""><h2 class="title-pro">Áo nữ thời trang</h2></a>
+
+                                    <span><del>25.00$</del>20.00$</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quod, ipsam? Consequuntur tenetur error eveniet dolorum iste commodi facilis soluta, sint dignissimos nemo provident beatae, et laborum omnis cum. Corrupti vitae neque </p>
+                                    <ul class="icon2">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <a href=""><img src="/images/DoNu/aophong7.jpg" width="300" height="300" alt=""></a>
+
+                                </div>
+                                <div class="content-pro">
+                                    <a href=""><h2 class="title-pro">Áo nữ thời trang</h2></a>
+
+                                    <span><del>25.00$</del>20.00$</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quod, ipsam? Consequuntur tenetur error eveniet dolorum iste commodi facilis soluta, sint dignissimos nemo provident beatae, et laborum omnis cum. Corrupti vitae neque </p>
+                                    <ul class="icon2">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <a href=""><img src="/images/DoNu/aophong10.jpg" width="300" height="300" alt=""></a>
+
+                                </div>
+                                <div class="content-pro">
+                                    <a href=""><h2 class="title-pro">Áo nữ thời trang</h2></a>
+
+                                    <span><del>25.00$</del>20.00$</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quod, ipsam? Consequuntur tenetur error eveniet dolorum iste commodi facilis soluta, sint dignissimos nemo provident beatae, et laborum omnis cum. Corrupti vitae neque </p>
+                                    <ul class="icon2">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <a href=""><img src="/images/DoNu/aophong11.jpg" width="300" height="300" alt=""></a>
+
+                                </div>
+                                <div class="content-pro">
+                                    <a href=""><h2 class="title-pro">Áo nữ thời trang</h2></a>
+
+                                    <span><del>25.00$</del>20.00$</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quod, ipsam? Consequuntur tenetur error eveniet dolorum iste commodi facilis soluta, sint dignissimos nemo provident beatae, et laborum omnis cum. Corrupti vitae neque </p>
+                                    <ul class="icon2">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="box-prod">
+                                <div class="box-thumb">
+                                    <div class="overlay top-right"></div>
+                                    <div class="overlay bottom-left"></div>
+                                    <a href=""><img src="/images/DoNu/aophong12.jpg" width="300" height="300" alt=""></a>
+
+                                </div>
+                                <div class="content-pro">
+                                    <a href=""><h2 class="title-pro">Áo nữ thời trang</h2></a>
+
+                                    <span><del>25.00$</del>20.00$</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quod, ipsam? Consequuntur tenetur error eveniet dolorum iste commodi facilis soluta, sint dignissimos nemo provident beatae, et laborum omnis cum. Corrupti vitae neque </p>
+                                    <ul class="icon2">
+                                        <li>
+                                            <a href="1">
+                                                <i class="fa fa-shopping-basket"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="2">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="3">
+                                                <i class="fa fa-chain-broken"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="4" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="quick-view-section" id="quickview">
+    <div class="quick-view-inner">
+        <div class="quick-view">
+            <div class="quick-view_left">
+                <div class="prod-slide-control">
+                    <input type="radio">
+                    <div class="avatar">
+                        <img src="/images/DoNu/chanvay1.jpg" alt="">
+                    </div>
+                    <div class="prod-slide">
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="/images/DoNam/aophong1.jpg" alt="">
+                                </div>
+                                <div>
+                                    <img src="/images/DoNam/aophong1.jpg" alt="">
+                                </div>
+                                <div>
+                                    <img src="/images/DoNam/aophong1.jpg" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="quick-view_right">
+                <h2>Áo phông thời trang mùa hè</h2>
+                <div class="rating">
+                    <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><span>/0 Reviews</span></li>
+                    </ul>
+                </div>
+                <div class="quick-review">
+                    <h3>Đánh giá nhanh</h3>
+                    <p>Fusce porttitor at ante eu egestas. Morbi vulputate diam at nibh imperdiet pretium. Nulla euismod, nibh nec tincidunt maximus, elit sem ornare nunc, et dictum elit dui sed justo. Donec scelerisque, erat vel pharetra luctus, nibh tortor efficitur nibh, non euismod leo diam ut risus.</p>
+                </div>
+                <div class="price">
+                    <span><u>25.00$</u> 20.00$</span>
+                </div>
+
+                <div class="order-box">
+                    <input type="number" value="1" min="1">
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+
+                <div class="lst-tag">
+                    <span><b>Tags: </b></span>
+                    <a href="">Phụ Kiện, </a>
+                    <a href="">Giày Trẻ Em, </a>
+                    <a href="">Áo Polo Nam, </a>
+                    <a href="">Áo Polo Nữ, </a>
+                    <a href="">Chân Váy Công Sở, </a>
+                    <a href="">Sơ Mi Nam Tay Ngắn, </a>
+                    <a href="">Sơ Mi Nam Tay Dài.</a>
+                </div>
+
+                <a class="close">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
