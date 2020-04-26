@@ -1,0 +1,123 @@
+﻿.product-res .lst-res .prod-item {
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 0 10px #333;
+}
+
+.product-res .lst-res .box-thumb {
+    height: 300px;
+    position: relative;
+}
+
+.product-res .lst-res .box-thumb .overlay {
+    position: absolute;
+    background: rgba(0,0,0,.1);
+    width: 0;
+    height: 0;
+    /*transform: scaleX(0);*/
+    transition: .4s ease;
+}
+
+.product-res .lst-res .box-thumb .overlay.top-right {
+    top: 0;
+    right: 0;
+}
+
+.product-res .lst-res .box-thumb .overlay.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.product-res .lst-res .prod-item:hover .box-thumb .overlay {
+    width: 100%;
+    height: 100%;
+}
+
+.product-res .lst-res .box-thumb img {
+    width: 100%;
+    height: 300px;
+    transition: .4s ease;
+}
+
+.product-res .lst-res .box-thumb ul.icon {
+    position: absolute;
+    top: 50%;
+    right: -65px;
+    transform: translateY(-50%);
+    list-style: none;
+    transition: 0s;
+}
+
+.product-res .lst-res .prod-item:hover .box-thumb ul.icon {
+    right: 0;
+}
+
+.product-res .lst-res ul.icon li {
+    padding: 5px 10px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.product-res .lst-res .prod-item:hover ul.icon li:nth-of-type(1) {
+    transition-delay: .1s;
+}
+
+.product-res .lst-res .prod-item:hover ul.icon li:nth-of-type(2) {
+    transition-delay: .3s;
+}
+
+.product-res .lst-res .prod-item:hover ul.icon li:nth-of-type(3) {
+    transition-delay: .5s;
+}
+
+.product-res .lst-res .prod-item:hover ul.icon li:nth-of-type(4) {
+    transition-delay: .7s;
+}
+
+.product-res .lst-res .prod-item:hover .box-thumb ul.icon li {
+    opacity: 1;
+}
+
+.product-res .lst-res ul.icon li a {
+    display: block;
+    font-size: 22px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+}
+
+.product-res .lst-res ul.icon li:hover a {
+    color: var(--theme-dark);
+}
+
+.fa-chain-broken:before {
+    content: '\f127';
+}
+
+.prod-item .box-prod .content-pro {
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.prod-item .box-prod .content-pro .title-pro {
+    display: block;
+    font-size: 24px;
+    white-space: normal;
+    color: #333;
+}
+
+.prod-item .box-prod .content-pro span {
+    font-size: 24px;
+    color: var(--theme-dark);
+}
+
+.prod-item .box-prod .content-pro span del {
+    color: #333;
+    margin-right: 10px;
+    font-size: 18px;
+}

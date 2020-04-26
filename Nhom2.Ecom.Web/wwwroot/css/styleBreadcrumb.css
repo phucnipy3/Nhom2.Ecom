@@ -1,0 +1,20 @@
+﻿.breadcrumb-inner ul {
+    list-style: none;
+}
+
+.breadcrumb-inner ul li {
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.breadcrumb-inner ul li:last-child {
+    color: #808080;
+}
+
+.breadcrumb-inner ul li .fa {
+    margin-right: 8px;
+}
+
+.breadcrumb-inner ul li.home {
+    color: var(--theme-dark);
+}

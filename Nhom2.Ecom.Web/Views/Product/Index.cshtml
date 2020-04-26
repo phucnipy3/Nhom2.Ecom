@@ -1,0 +1,491 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css{
+    <link rel="stylesheet" href="~/css/styleListProd.css">
+    <link rel="stylesheet" href="~/css/styleBreadcrumb.css">
+    <link rel="stylesheet" href="~/css/styleProduct.css">
+}
+
+@section jquery{
+    <script src="/js/jquuery-3.3.3.min.js"></script>
+    <script src="~/js/jsProduct.js"></script>
+}
+
+<section class="breadcrumb-section">
+    <div class="widget">
+        <div class="breadcrumb-inner">
+            <ul>
+                <li class="home"><a href=""><i class="fa fa-home"></i>Home</a></li>
+
+                <li><i class="fa fa-angle-right"></i><a href="">Thời trang nữ</a></li>
+                <li><i class="fa fa-angle-right"></i><a href="">Áo Polo nữ</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="product-section">
+    <div class="product-inner section-padding">
+        <div class="widget">
+            <div class="product-top">
+                <div class="prod-left">
+                    <div class="prod-slide-control">
+                        <input type="radio" name="avatar" id="ava1" checked="checked">
+                        <input type="radio" name="avatar" id="ava2">
+                        <input type="radio" name="avatar" id="ava3">
+                        <input type="radio" name="avatar" id="ava4">
+                        <div class="prod-avatar">
+                            <img src="/images/DoNu/chanvay1.jpg" alt="">
+                            <img src="/images/DoNu/chanvay2.jpg" alt="">
+                            <img src="/images/DoNu/chanvay3.jpg" alt="">
+                            <img src="/images/DoNu/chanvay4.jpg" alt="">
+                        </div>
+                        <div class="prod-slide">
+                            <ul>
+                                <li>
+                                    <label for="ava1">
+                                        <img src="/images/DoNu/chanvay1.jpg" alt="">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="ava2">
+                                        <img src="/images/DoNu/chanvay2.jpg" alt="">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="ava3">
+                                        <img src="/images/DoNu/chanvay3.jpg" alt="">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="ava4">
+                                        <img src="/images/DoNu/chanvay4.jpg" alt="">
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="prod-right">
+                    <h1 class="title">Chân váy bút chì thanh lịch</h1>
+                    Giá: <span><del>25.00$</del>20.00$</span>
+
+                    <div>
+                        <p>Màu sắc:</p>
+                        <input type="radio" name="color" id="colo1" checked="checked">
+                        <input type="radio" name="color" id="colo2">
+                        <input type="radio" name="color" id="colo3">
+                        <label for="colo1">
+                            <span style="background: #FFFFFF"></span>
+                        </label>
+                        <label for="colo2">
+                            <span style="background: #A0A0A0"></span>
+                        </label>
+                        <label for="colo3">
+                            <span style="background: #000"></span>
+                        </label>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between">
+                        <div style="width: 50%">
+                            Kích thước:
+                            <div class="selection" style=" margin-top: 10px;">
+                                <div class="select">
+                                    <span id="value">Medium</span>
+                                    <i class="fa fa-sort-down"></i>
+                                </div>
+                                <div class="option">
+                                    <div class="opt-item">
+                                        <span>Small</span>
+                                    </div>
+                                    <div class="opt-item">
+                                        <span>Menidum</span>
+                                    </div>
+                                    <div class="opt-item">
+                                        <span>Large</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width: 40%">
+                            Số lượng:
+                            <div class="amount" style=" margin-top: 10px;">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-arrow-down"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control amount" value="1">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-arrow-up"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="button">
+                            <button class="btn btn-add" style="margin-right: 15px;">Thêm vào giỏ</button>
+                            <button class="btn btn-add">Mua ngay</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <strong>Ưu đãi dành riêng cho khách hàng đặt trước Online:</strong>
+
+                        <ul>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Giữ hàng tại Shop (không mua không sao).
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Giao hàng miễn phí toàn quốc trong 60 phút.
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Tư vấn miễn phí 24/7 (cả dịp Lễ, Tết).
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Bảo hành nhanh tại hơn 200 Shop trên toàn quốc.
+                            </li>
+                            <li>
+                                <i class="fa fa-check"></i>
+                                Đổi trả thoải mái theo nhu cầu..
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="product-bottom">
+                <div class="prod-bottom-right">
+
+                    <input type="radio" name="nav-pro" id="desc-prod" >
+                    <input type="radio" name="nav-pro" id="cmt-prod" checked="checked">
+                    <input type="radio" name="nav-pro" id="rela-prod">
+
+                    <div>
+                        <ul class="nav">
+                            <li><label for="desc-prod">MÔ TẢ SẢN PHẨM</label></li>
+                            <li><label for="cmt-prod">BÌNH LUẬN</label></li>
+                            <li><label for="rela-prod">SẢN PHẨM CÙNG NHÓM</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="desc-prod hidden">
+                        <p>Áo sơ mi The Blues màu xám phối túi ngực tay dài được thiết kế đơn giản nhưng hiện đại trên nền chất liệu vải Cotton pha thoáng mát, mang đến sự năng động và trẻ trung cho người mặc.</p>
+
+                        <ul>
+                            <li>Thành phần 100% Cotton</li>
+                            <li>Cổ bẻ, tay dài lịch sự</li>
+                            <li>Màu sắc tươi sáng, trụ nút ẩn trẻ trung</li>
+                            <li>Vạt bầu, phối túi ngực</li>
+                            <li>Sản xuất tại Việt Nam </li>
+                        </ul>
+
+                        <h3>Hướng dẫn bảo quản</h3>
+                        <p>Không ủi trực tiếp lên hình in và ủi ở nhiệt độ thích hợp</p>
+                        <p>Không giặt chung với áo ra màu</p>
+                        <p>Giặt và phơi áo ở mặt trái</p>
+
+                        <h3>Thông tin thương hiệu</h3>
+                        <p>The Blues là thương hiệu hàng đầu về thời trang Việt Nam với nhiều sản phẩm đa dạng và phong phú. Với hơn 230 cửa hàng đại diện trên toàn quốc: Bắc, Trung, Nam, Đông và Tây, The Blues ngày càng khẳng định thương hiệu hàng Việt Nam chất lượng cao trong làng thời trang. Những sản phẩm của The Blues luôn nhận được đánh giá cao về chất lượng, giá cả và tính thẩm mỹ phù hợp với mọi người tiêu dùng Việt Nam.</p>
+                    </div>
+
+                    <div class="cmt-prod hidden">
+                        <div class="lst-cmt">
+                            <div class="cmt-box">
+                                <div class="cmt-author">
+                                    <div class="cmt-img">
+                                        <img src="/images/author.webp" alt="avatar">
+                                    </div>
+                                    <div class="cmt-content">
+                                        <div class="cmt-main">
+                                            <a href="">Trần Lê Anh Vũ</a>
+                                            <span>Sản phẩm này có loại dành cho "nam" không ad? Nếu có thì bao nhiêu tiền vậy? Nếu mua thì sẽ thanh toán như thế nào?</span>
+                                        </div>
+
+                                        <div class="cmt-info">
+                                            <a href="" class="rep">Trả lời</a>
+                                            <span class="date">3 ngày</span>
+                                        </div>
+
+                                        <div class="rep-cmt">
+                                            <textarea id="w3mission" rows="4" cols="50"></textarea>
+                                            <div class="box-emotion">
+                                                <input id="hdFileCmtUpload" type="file" class="hide" accept="image/x-png, image/gif, image/jpeg">
+                                                <a href="#"><i class="fa fa-camera"></i> Gửi ảnh</a>
+                                                <a href="#">Qui định đăng bình luận</a>
+                                                <div>
+                                                    <button>Gửi</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmt-box">
+                                <div class="cmt-author">
+                                    <div class="cmt-img">
+                                        <img src="/images/author.webp" alt="avatar">
+                                    </div>
+                                    <div class="cmt-content">
+                                        <div class="cmt-main">
+                                            <a href="">Trần Lê Anh Vũ</a>
+                                            <span>Sản phẩm này có loại dành cho "nam" không ad? Nếu có thì bao nhiêu tiền vậy? Nếu mua thì sẽ thanh toán như thế nào?</span>
+                                        </div>
+
+                                        <div class="cmt-info">
+                                            <a href=""  class="rep">Trả lời</a>
+                                            <span class="date">3 ngày</span>
+                                        </div>
+
+                                        <div class="rep-cmt">
+                                            <textarea id="w3mission" rows="4" cols="50"></textarea>
+                                            <div class="box-emotion">
+                                                <input id="hdFileCmtUpload" type="file" class="hide" accept="image/x-png, image/gif, image/jpeg">
+                                                <a href="#"><i class="fa fa-camera"></i> Gửi ảnh</a>
+                                                <a href="#">Qui định đăng bình luận</a>
+                                                <div>
+                                                    <button>Gửi</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmt-box">
+                                <div class="cmt-author">
+                                    <div class="cmt-img">
+                                        <img src="/images/author.webp" alt="avatar">
+                                    </div>
+                                    <div class="cmt-content">
+                                        <div class="cmt-main">
+                                            <a href="">Trần Lê Anh Vũ</a>
+                                            <span>Sản phẩm này có loại dành cho "nam" không ad? Nếu có thì bao nhiêu tiền vậy? Nếu mua thì sẽ thanh toán như thế nào?</span>
+                                        </div>
+
+                                        <div class="cmt-info">
+                                            <a href=""  class="rep">Trả lời</a>
+                                            <span class="date">3 ngày</span>
+                                        </div>
+
+                                        <div class="rep-cmt">
+                                            <textarea id="w3mission" rows="4" cols="50"></textarea>
+                                            <div class="box-emotion">
+                                                <input id="hdFileCmtUpload" type="file" class="hide" accept="image/x-png, image/gif, image/jpeg">
+                                                <a href="#"><i class="fa fa-camera"></i> Gửi ảnh</a>
+                                                <a href="#">Qui định đăng bình luận</a>
+                                                <div>
+                                                    <button>Gửi</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmt-box">
+                                <div class="cmt-author">
+                                    <div class="cmt-img">
+                                        <img src="/images/author.webp" alt="avatar">
+                                    </div>
+                                    <div class="cmt-content">
+                                        <div class="cmt-main">
+                                            <a href="">Trần Lê Anh Vũ</a>
+                                            <span>Sản phẩm này có loại dành cho "nam" không ad? Nếu có thì bao nhiêu tiền vậy? Nếu mua thì sẽ thanh toán như thế nào?</span>
+                                        </div>
+
+                                        <div class="cmt-info">
+                                            <a href=""  class="rep">Trả lời</a>
+                                            <span class="date">3 ngày</span>
+                                        </div>
+
+                                        <div class="rep-cmt">
+                                            <textarea id="w3mission" rows="4" cols="50"></textarea>
+                                            <div class="box-emotion">
+                                                <input id="hdFileCmtUpload" type="file" class="hide" accept="image/x-png, image/gif, image/jpeg">
+                                                <a href="#"><i class="fa fa-camera"></i> Gửi ảnh</a>
+                                                <a href="#">Qui định đăng bình luận</a>
+                                                <div>
+                                                    <button>Gửi</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center;">
+                                <a href="" class="show-more">Xem thêm<i class="fa fa-sort-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rela-prod hidden">
+                        <div class="product-res">
+                            <div id="lst-res-1" class="lst-res">
+                                <div class="prod-item">
+                                    <div class="box-prod">
+                                        <div class="box-thumb">
+                                            <div class="overlay top-right"></div>
+                                            <div class="overlay bottom-left"></div>
+                                            <img src="/images/DoNu/aophong2.jpg" alt="">
+                                            <ul class="icon">
+                                                <li>
+                                                    <a href="1">
+                                                        <i class="fa fa-shopping-basket"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="2">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="3">
+                                                        <i class="fa fa-chain-broken"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="4">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-pro">
+                                            <h2 class="title-pro">Áo nữ thời trang</h2>
+                                            <span><del>25.00$</del>20.00$</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="prod-item">
+                                    <div class="box-prod">
+                                        <div class="box-thumb">
+                                            <div class="overlay top-right"></div>
+                                            <div class="overlay bottom-left"></div>
+                                            <img src="/images/DoNu/aophong5.jpg" alt="">
+                                            <ul class="icon">
+                                                <li>
+                                                    <a href="1">
+                                                        <i class="fa fa-shopping-basket"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="2">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="3">
+                                                        <i class="fa fa-chain-broken"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="4">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-pro">
+                                            <h2 class="title-pro">Áo nữ thời trang</h2>
+                                            <span><del>25.00$</del>20.00$</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="prod-item">
+                                    <div class="box-prod">
+                                        <div class="box-thumb">
+                                            <div class="overlay top-right"></div>
+                                            <div class="overlay bottom-left"></div>
+                                            <img src="/images/DoNu/aophong4.jpg" alt="">
+                                            <ul class="icon">
+                                                <li>
+                                                    <a href="1">
+                                                        <i class="fa fa-shopping-basket"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="2">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="3">
+                                                        <i class="fa fa-chain-broken"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="4">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-pro">
+                                            <h2 class="title-pro">Áo nữ thời trang</h2>
+                                            <span><del>25.00$</del>20.00$</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prod-item">
+                                    <div class="box-prod">
+                                        <div class="box-thumb">
+                                            <div class="overlay top-right"></div>
+                                            <div class="overlay bottom-left"></div>
+                                            <img src="/images/DoNu/aophong4.jpg" alt="">
+                                            <ul class="icon">
+                                                <li>
+                                                    <a href="1">
+                                                        <i class="fa fa-shopping-basket"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="2">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="3">
+                                                        <i class="fa fa-chain-broken"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="4">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="content-pro">
+                                            <h2 class="title-pro">Áo nữ thời trang</h2>
+                                            <span><del>25.00$</del>20.00$</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
