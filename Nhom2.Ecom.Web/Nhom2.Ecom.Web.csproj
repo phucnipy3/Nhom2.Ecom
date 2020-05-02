@@ -10,12 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\Resources\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\css\reset.css" />
   </ItemGroup>
 
   <ItemGroup>

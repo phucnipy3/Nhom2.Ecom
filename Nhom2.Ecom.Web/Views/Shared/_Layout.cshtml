@@ -1,236 +1,827 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharah Shop</title>
-    <link rel="stylesheet" href="~/css/reset.css">
-    <link rel="stylesheet" href="~/css/global.css" />
-    <link rel="stylesheet" href="~/css/styleHeader.css" />
-    @RenderSection("css", false)
-    <link rel="stylesheet" href="~/css/styleFooter.css" />
-    <link href="http://fonts.googleapis.com/css?family=Proza+Libre:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800&amp;display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home Page</title>
+
+    <base href="https://localhost:44338/" target="_blank">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,700,300|Lato:400,300,300italic,400italic,700,700italic|Playfair+Display:400,400italic,700,700italic|Droid+Serif:400,700,400italic,700italic|Roboto:400,700">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="~/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="~/css/helper.css">
+    <link rel="stylesheet" type="text/css" href="~/css/animations.css">
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.bxslider.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/myStyle.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/responsive.css">
 </head>
-<body>
-    <section class="banner-section">
-        <div class="banner-inner section-padding">
-            <div class="widget">
-                <header id="header">
-                    <div class="header-pc">
-                        <div class="header-pc_left">
-                            <a href="index.html" class="logo">
-                                <img src="~/images/logo2.png" alt="">
-                            </a>
-                        </div>
-                        <div class="header-pc_right">
-                            <div class="header-top">
-                                <div class="header-top_left">
-                                    <div class="shipping-txt">
-                                        <h3>GIAO HÀNG MIỄN PHÍ</h3>
-                                        <p>Với hóa đơn trên 500.000</p>
-                                    </div>
+<body class="cms-index-index page-layout-1columns home-page1">
+    
+    <div class="wrapper">
+
+        <div id="header" class="site-header style1 style-black mid-header">
+            <div class="container-fluid">
+                <div class="header-content">
+
+                    <div class="logo">
+                        <a href="index.html"><img alt="logo" src="images/logo.png"></a>
+                    </div><!-- logo  -->
+
+                    <span data-action="toggle-nav" class="action nav-toggle"><span class="pe-7s-menu"></span></span> <!-- toggle menu mobile -->
+
+                    <div class="minicart-wrapper dropdown">
+                        <a class="dropdown-toggle mini-cart" href="#" role="button" data-toggle="dropdown">
+                            <span class="pe-7s-shopbag"></span>
+                            <span class="counter qty">
+                                <span class="counter-number">2</span>
+                            </span>
+                        </a>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                        <script>
+                            $(document).ready(function () {
+                                $(".mini-cart").hover(function () {
+                                    var count_number = parseInt($('.counter .counter-number').text());
+                                    if (count_number < 3) {
+                                        $('.minicart-items').removeClass('limit-items');
+                                    } else {
+                                        $('.minicart-items').addClass('limit-items');
+                                    }
+                                });
+                            });
+                        </script>
+
+                        <div class="block-minicart dropdown-menu dropdown-menu-right">
+                            <div id="minicart-content-wrapper">
+                                <div class="minicart-items-wrapper">
+                                    <ol class="minicart-items" start="2">
+                                        <li class="product-item">
+                                            <a class="product-item-photo" href="#" title="The Name Product">
+                                                <img class="product-image-photo" src="images/media/minicart.jpg" alt="The Name Product">
+                                            </a>
+                                            <div class="product-item-details">
+                                                <strong class="product-item-name">
+                                                    <a href="#">The Name Product</a>
+                                                </strong>
+                                                <div class="product-reviews-summary">
+                                                    <div class="rating-summary">
+                                                        <div class="rating-result" title="70%">
+                                                            <span style="width:70%">
+                                                                <span><span>70</span>% of <span>100</span></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item-pricing">
+                                                    <span class="price-qty">1</span>
+                                                    <span class="price">$200.00</span>
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="action delete" href="#" title="Remove item">
+                                                        <span>Remove</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="product-item">
+                                            <a class="product-item-photo" href="#" title="The Name Product">
+                                                <img class="product-image-photo" src="images/media/minicart.jpg" alt="The Name Product">
+                                            </a>
+                                            <div class="product-item-details">
+                                                <strong class="product-item-name">
+                                                    <a href="#">The Name Product</a>
+                                                </strong>
+                                                <div class="product-reviews-summary">
+                                                    <div class="rating-summary">
+                                                        <div class="rating-result" title="70%">
+                                                            <span style="width:70%">
+                                                                <span><span>70</span>% of <span>100</span></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item-pricing">
+                                                    <span class="price-qty">1</span>
+                                                    <span class="price">$200.00</span>
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="action delete" href="#" title="Remove item">
+                                                        <span>Remove</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
                                 </div>
-                                <div class="header-top_right">
-                                    <div class="shipping-txt">
-                                        <span><img src="assets/images/get-in-tuch.png" alt="" style="margin-right: 18px">LIÊN HỆ: </span>
-                                        <span class="hightline">19001010</span>
-                                        <p>Chào mừng bạn đến với SARAH SHOP!</p>
-                                    </div>
+                                <div class="subtotal">
+                                    <span class="label">total</span>
+                                    <span class="price">$400.00</span>
                                 </div>
-                            </div>
-                            <div class="header-bottom">
-                                <form action="">
-                                    <div class="controll">
-                                        <select name="" id="">
-                                            <option value="">Nhóm sản phẩm</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                        <div style="display: flex;">
-                                            <input type="text" placeholder="Nhập từ khóa tìm kiếm">
-                                            <button type="submit">
-                                                <span><i class="fa fa-search"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-            </div>
-
-            <div id="main-menu" class="widget">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="shop.html">Cửa hàng</a></li>
-                        <li><a href="blog.html">Bài viết</a></li>
-                        <li><a href="about.html">Về chúng tôi</a></li>
-                        <li><a href="contact.html">Liên hệ</a></li>
-                    </ul>
-                </nav>
-                <div class="cart">
-                    <a href="#">
-                        Giỏ hàng
-                        <span>10</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    @RenderBody()
-
-    <section class="service-section">
-        <div class="service-inner section-padding">
-            <div class="widget">
-                <div class="services">
-                    <div class="service-box">
-                        <h3><i class="fa fa-truc"></i>Miễn phí vận chuyển</h3>
-                        <span>Cho đơn đặt hàng hơn 2 triệu VNĐ</span>
-                    </div>
-                    <div class="service-box">
-                        <h3><i class="fa fa-cog"></i>Hoàn tiền 100% mua hàng</h3>
-                        <span>Trong vòng 7 ngày</span>
-                    </div>
-                    <div class="service-box">
-                        <h3><i class="fa fa-phone"></i>Đặt hàng trực tuyến</h3>
-                        <span>SĐT: (84) 1234 432 762</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-inner section-padding">
-            <div class="widget">
-                <div class="footer-top">
-                    <div class="footer-menu">
-                        <h3>Thông tin hỗ trợ</h3>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    Tìm hiểu về mua trả góp
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Tìm trung tâm bảo hành hãng
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Hướng dẫn mua hàng online
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Giao hàng và thanh toán
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-menu">
-                        <h3>Dịch vụ khách hàng</h3>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    Giới thiệu về công ty
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Gởi góp ý & khiếu nại
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Tư vấn
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Liên hệ
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-menu">
-                        <h3>Dịch vụ & Hỗ trợ</h3>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    Chính sách giao hàng
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Chính sách đổi trả
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Chính sách bảo hành
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Chính sách trả góp
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-menu">
-                        <h3>Bản tin</h3>
-                        <p>Đăng ký thành viên để nhận bản tin mỗi ngày</p>
-                        <form action="">
-                            <div class="controll">
-                                <div style="display: flex;">
-                                    <input type="text" placeholder="Nhập email của bạn" style="width: 75%; font-size: 14px;">
-                                    <button type="submit" style="width: 25%">
-                                        <span><i class="fa fa-search"></i></span>
+                                <div class="actions">
+                                    <button class="btn btn-default checkout" type="button" title="Check Out">
+                                        <span>Check Out</span>
                                     </button>
+                                    <a class="btn btn-default viewcart" href="#">
+                                        <span>go to cart</span>
+                                    </a>
                                 </div>
+                            </div>
+                        </div>
+                    </div><!-- Cart header -->
+
+                    <div class="customer-setting dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"><span class="pe-7s-config"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="header-link">
+                                <span class="title">Account</span>
+                                <ul class="links">
+                                    <li>
+                                        <a href="#" class="link-account"
+                                           data-toggle="modal" data-target="#box-login">
+                                            <i class="fa fa-user" aria-hidden="true"></i>My Account
+                                        </a>
+                                        <script>
+                                            $('a[data-toggle="modal"]').click(function (e) {
+                                                e.preventDefault();
+                                                $('#header').toggleClass('position-static');
+                                            });
+                                        </script>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link-wishlist"><i class="fa fa-heart" aria-hidden="true"></i>My Wishlist </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="link-checkout"><i class="fa fa-usd" aria-hidden="true"></i>Check Out</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link-login"><i class="fa fa-unlock-alt" aria-hidden="true"></i>Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="switcher-language" class="switcher switcher-language">
+                                <strong class="switcher-label"><span>Language</span></strong>
+                                <ul class="switcher-options">
+                                    <li class="active switcher-option">
+                                        <strong>
+                                            <img alt="" src="images/flags/flag_english.png" class="switcher-flag">
+                                            <span class="switcher-text">English   </span>
+                                        </strong>
+                                    </li>
+                                    <li class="switcher-option">
+                                        <a href="#">
+                                            <img alt="" src="images/flags/flag_french.png" class="switcher-flag">
+                                            <span class="switcher-text">French</span>
+                                        </a>
+                                    </li>
+                                    <li class="switcher-option">
+                                        <a href="#">
+                                            <img alt="" src="images/flags/flag_spain.png" class="switcher-flag">
+                                            <span class="switcher-text">Spain</span>
+                                        </a>
+                                    </li>
+                                    <li class="switcher-option">
+                                        <a href="#">
+                                            <img alt="" src="images/flags/flag_germany.png" class="switcher-flag">
+                                            <span class="switcher-text">Germany</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="switcher-currency" class="switcher switcher-currency">
+                                <strong class="switcher-label"><span>Currency</span></strong>
+                                <ul class="switcher-options">
+                                    <li class="active switcher-option">
+                                        <strong><i class="fa fa-usd" aria-hidden="true"></i><span>- usd</span></strong>
+                                    </li>
+                                    <li class="switcher-option">
+                                        <a href="#"><i class="fa fa-eur" aria-hidden="true"></i><span>- eur</span></a>
+                                    </li>
+                                    <li class="switcher-option">
+                                        <a href="#"><i class="fa fa-gbp" aria-hidden="true"></i><span>- gbp</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- Setting header -->
+
+                    <div id="switcher-block-search" class="block-search dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"><span class="pe-7s-search"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <form id="search_mini_form" class="form minisearch">
+                                <div class="control">
+                                    <input type="text" class="input-search" placeholder="Search here..." id="search">
+                                </div>
+                                <button class="action search" title="Search" type="submit" disabled="">
+                                    <span>Search</span>
+                                </button>
+                                <a class="close-search" href="#" role="button" data-toggle="dropdown">x</a>
+                            </form>
+                        </div>
+                    </div><!-- Search box -->
+
+                    <nav class="navigation">
+                        <ul class="ui-menu">
+                            <li class="level0 level-top parent first active">
+                                <a class="level-top" href="index.html">
+                                    <span>home</span>
+                                </a>
+                            </li>
+
+                            <li class="level0 level-top parent">
+                                <a class="level-top" href="Gird_Products.html">
+                                    <span>shop</span>
+                                </a>
+                                <span class="toggle-submenu"></span>
+                                <ul class="level0 submenu">
+                                    <li class="level1 parent">
+                                        <a href="home1.html">
+                                            <span>Thời trang nam</span>
+                                        </a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="level1 submenu">
+                                            <li class="level2 first">
+                                                <a href="#">
+                                                    <span>Áo</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Chân váy</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Đồ bộ</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Giày</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Trang sức</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="level1 parent">
+                                        <a href="home2.html">
+                                            <span>Thời trang nữ</span>
+                                        </a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="level1 submenu">
+                                            <li class="level2 first">
+                                                <a href="#">
+                                                    <span>Áo</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Quần</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Đồ bộ</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Giày</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Trang sức</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level1 parent">
+                                        <a href="home2.html">
+                                            <span>Thời trang trẻ em</span>
+                                        </a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="level1 submenu">
+                                            <li class="level2 first">
+                                                <a href="#">
+                                                    <span>Áo</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Quần</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Đồ bộ</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Giày</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Phụ kiện</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level1 parent">
+                                        <a href="home2.html">
+                                            <span>Thời trang mẹ và bé</span>
+                                        </a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="level1 submenu">
+                                            <li class="level2 first">
+                                                <a href="#">
+                                                    <span>Áo</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Quần</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Đồ bộ</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Giày</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Phụ kiện</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level1 parent">
+                                        <a href="home2.html">
+                                            <span>Thời trang cặp</span>
+                                        </a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="level1 submenu">
+                                            <li class="level2 first">
+                                                <a href="#">
+                                                    <span>Áo</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Quần</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Đồ bộ</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Giày</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Phụ kiện</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="level0 level-top parent megamenu">
+                                <a class="level-top" href="#">
+                                    <span>Hots</span>
+                                </a>
+                                <span class="toggle-submenu"></span>
+                                <ul class="level0 submenu">
+                                    <li class="level1 first parent">
+                                        <a href="#">
+                                            <span>Product Elements</span>
+                                        </a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="level1 submenu">
+                                            <li class="level2 first">
+                                                <a href="#">
+                                                    <span>Product Deal</span>
+                                                    <span class="label-menu label-new">new</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Products By Category</span>
+                                                    <span class="label-menu label-hot">hot</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Variable Product</span>
+                                                    <span class="label-menu label-sale">sale</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Product Featured video</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Product image zoom</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Product layout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="level1 parent">
+                                        <a href="#">
+                                            <span>Product Elements</span>
+                                        </a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="level1 submenu">
+                                            <li class="level2 first">
+                                                <a href="#">
+                                                    <span>Products - Best Selling   </span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Featured - Hover Push</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Top Rate - Hover flip</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Product - recent</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Product - on sale</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Product - columns</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="level1 parent">
+                                        <a href="#">
+                                            <span>Theme Elements</span>
+                                        </a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="level1 submenu">
+                                            <li class="level2 first">
+                                                <a href="#">
+                                                    <span>Accordion / Tabs</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Google Maps</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Columns</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Team Works</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2">
+                                                <a href="#">
+                                                    <span>Testimonials</span>
+                                                </a>
+                                            </li>
+                                            <li class="level2 last">
+                                                <a href="#">
+                                                    <span>Raymond banner</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level1 last">
+                                        <div class="custom-block">
+                                            <a href="#" class="custom-img">
+                                                <img alt="" src="images/banner/banner-menu.jpg">
+                                                <span>custom block</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="level0 level-top parent">
+                                <a class="level-top" href="contact.html">
+                                    <span>About Us</span>
+                                </a>
+                            </li>
+
+                            <li class="level0 level-top parent">
+                                <a class="level-top" href="Blogs.html">
+                                    <span>blogs</span>
+                                </a>
+                            </li>
+
+                            <li class="level0 level-top parent last">
+                                <a class="level-top" href="Portfolio.html">
+                                    <span>Contact Us</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav><!-- Main menu -->
+
+                </div>
+            </div>
+        </div><!-- site-header -->
+        @RenderBody()
+        <!-- site-main -->
+
+        <div id="footer" class="site-footer style1 style-white">
+
+            <div class="block-newsletter">
+                <div class="container">
+                    <div class="block-title">
+                        <strong>join our newsletter</strong>
+                        <p>Sign up for our newsletter and get <span style="color:#5d957b;">20%</span> off your next order. Prettysweet, we know.</p>
+                    </div>
+                    <div class="block-content">
+                        <form class="form subscribe">
+                            <div class="control">
+                                <input type="email" placeholder="Type your email here" name="email" class="input-subscribe">
+                            </div>
+                            <div class="actions">
+                                <button type="submit" title="Subscribe" class="btn subscribe">
+                                    <span>Subscribe</span>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
+            </div><!-- Widget Newsletter -->
 
-                <div class="footer-bottom">
-                    <div class="logo">
-                        <img src="~/images/logo1.png" alt="logo">
-                    </div>
-                    <div class="address">
-                        <p><i class="fa fa-map-marker">&nbsp;</i> - Địa chỉ: 01 Võ Văn Ngân, phường Bình Thọ, quận Thủ Đức, TP Hồ Chí Minh</p>
-                        <p><i class="fa fa-phone">&nbsp;</i> - Điện thoại: (84) 1234 234 789</p>
-                        <p><i class="fa fa-envelope">&nbsp;</i> - Địa chỉ email: (info@gmail.com</p>
-                    </div>
+            <div class="footer-content">
+                <div class="container">
                     <div class="social">
-                        <ul>
-                            <li class="facebook">
-                                <a target="_blank" href="e" class="fa fa-facebook"></a>
-                            </li>
-                            <li class="twitter">
-                                <a class="fa fa-twitter" target="_blank" href="d"></a>
-                            </li>
-                            <li class="google-plus">
-                                <a class="fa fa-google-plus" target="_blank" href="c"></a>
-                            </li>
-                        </ul>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                    </div><!-- Link - Social -->
+
+                    <ul class="footer-links">
+                        <li><a href="#">Help & Contact</a></li>
+                        <li><a href="#">Shipping & taxes</a></li>
+                        <li><a href="#">Return policy</a></li>
+                        <li><a href="#">affiliates</a></li>
+                        <li><a href="#">legalnotice</a></li>
+                    </ul><!-- links -->
+
+                    <div class="copyright">
+                        Copyright 2015 <a href="#">ADELLA</a>. All rights reserved.
+                    </div><!-- Copyright -->
+                </div>
+            </div>
+
+            <a class="back-to-top" href="#">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </a><!-- Back - To - Top -->
+        </div><!-- site-footer -->
+    </div>
+
+
+    <div class="modal fade" id="box-login" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="box-thumb">
+                                <img src="images/fashion-shop.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="login-wrap">
+                                <div class="login-html">
+                                    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+                                    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+                                    <div class="login-form">
+                                        <div class="sign-in-htm">
+                                            <div class="group">
+                                                <label for="user" class="label">Username</label>
+                                                <input id="user" type="text" class="input">
+                                            </div>
+                                            <div class="group">
+                                                <label for="pass" class="label">Password</label>
+                                                <input id="pass" type="password" class="input" data-type="password">
+                                            </div>
+                                            <div class="group">
+                                                <input id="check" type="checkbox" class="check" checked>
+                                                <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                                            </div>
+                                            <div class="group">
+                                                <input type="submit" class="button" value="Sign In">
+                                            </div>
+                                            <div class="hr"></div>
+                                            <div class="foot-lnk">
+                                                <a href="#forgot">Forgot Password?</a>
+                                            </div>
+                                        </div>
+                                        <div class="sign-up-htm">
+                                            <div class="group">
+                                                <label for="user" class="label">Username</label>
+                                                <input id="user" type="text" class="input">
+                                            </div>
+                                            <div class="group">
+                                                <label for="pass" class="label">Password</label>
+                                                <input id="pass" type="password" class="input" data-type="password">
+                                            </div>
+                                            <div class="group">
+                                                <label for="pass" class="label">Repeat Password</label>
+                                                <input id="pass" type="password" class="input" data-type="password">
+                                            </div>
+                                            <div class="group">
+                                                <label for="pass" class="label">Email Address</label>
+                                                <input id="pass" type="text" class="input">
+                                            </div>
+                                            <div class="group">
+                                                <input type="submit" class="button" value="Sign Up">
+                                            </div>
+                                            <div class="hr"></div>
+                                            <div class="foot-lnk">
+                                                <label for="tab-1">Already Member?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="footer-source">
-                    <p>© Bản quyền thuộc về <a href="" target="_blank">Nobita</a>. Cung cấp bởi <a href="" target="_blank">Haravan</a>.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-    </footer>
-    @RenderSection("jquery", false)
+    </div>
+
+    <div class="modal fade" id="box-quick-view" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="box-thumb">
+                                <img src="images/fashion-shop.jpg" alt="">
+                            </div>
+                            <div class="list-img">
+                                <ol class="post-items owl-carousel nav-center-center" data-nav="true" data-dots="false" data-margin="0" data-responsive='{"0":{"items":2},"600":{"items":2}}'>
+                                    <li class="post-item">
+                                        <div class="box-thumb">
+                                            <img src="images/fashion-shop.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="post-item">
+                                        <div class="box-thumb">
+                                            <img src="images/fashion-shop.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="post-item">
+                                        <div class="box-thumb">
+                                            <img src="images/fashion-shop.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="post-item">
+                                        <div class="box-thumb">
+                                            <img src="images/fashion-shop.jpg" alt="">
+                                        </div>
+                                    </li>
+
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="content-right">
+                                <h1>Áo phông thời trang mùa hè</h1>
+                                <div class="rating">
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span>/0 Reviews</span></li>
+                                    </ul>
+                                </div>
+                                <div class="quick-review">
+                                    <h3>Đánh giá nhanh</h3>
+                                    <p>Fusce porttitor at ante eu egestas. Morbi vulputate diam at nibh imperdiet pretium. Nulla euismod, nibh nec tincidunt maximus, elit sem ornare nunc, et dictum elit dui sed justo. Donec scelerisque, erat vel pharetra luctus, nibh tortor efficitur nibh, non euismod leo diam ut risus.</p>
+                                </div>
+                                <div class="price">
+                                    <span><del>25.00$</del> 20.00$</span>
+                                </div>
+                                <div class="order-box">
+                                    <input type="number" value="1" min="1">
+                                    <button>Add To Cart</button>
+                                </div>
+                                <div class="lst-tag">
+                                    <span><b>Tags: </b></span>
+                                    <a href="">Phụ Kiện, </a>
+                                    <a href="">Giày Trẻ Em, </a>
+                                    <a href="">Áo Polo Nam, </a>
+                                    <a href="">Áo Polo Nữ, </a>
+                                    <a href="">Chân Váy Công Sở, </a>
+                                    <a href="">Sơ Mi Nam Tay Ngắn, </a>
+                                    <a href="">Sơ Mi Nam Tay Dài.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('a[data-target="#box-quick-view"]').click(function (e) {
+            e.preventDefault();
+            $('#header').toggleClass('position-static');
+            // alert('ok');
+        });
+        $('button[data-dismiss="modal"]').click(function () {
+            $('#header').toggleClass('position-static');
+        });
+    </script>
+
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!-- animate -->
+    <script type="text/javascript" src="js/css3-animate-it.js"></script>
+
+    <!-- countUp -->
+
+    <script type="text/javascript" src="js/countUp/countUp.js"></script>
+
+    <!-- Boostrap -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <!-- sticky -->
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+
+    <!-- OWL CAROUSEL Slider -->
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+
+    <!-- Main -->
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
+
+<!-- Mirrored from kute-themes.com/html/adella/home1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Sep 2018 04:44:09 GMT -->
 </html>
