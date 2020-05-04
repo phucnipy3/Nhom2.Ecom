@@ -1,0 +1,779 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main" class="site-main">
+    <div class="custom-title-wrapper " style="background: url(images/background.jpg);">
+        <div class="container">
+            <div class="page-title-wrapper">
+                <h1 class="page-title">
+                    Detail Products
+                </h1>
+            </div>
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Women</a></li>
+                <li class="active">Detail Products</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="columns container">
+
+
+        <div class="clearfix">
+
+            <div class="product-media vertical">
+                <div class="images-large">
+
+                    <img id="product-zoom" alt="" src='images/media/detail1.jpg' data-zoom-image="images/media/zoom1.jpg" />
+                </div>
+
+                <div class="images-small ">
+                    <ul id="img-thumb">
+                        <li>
+                            <a href="#"><img alt="" src="images/media/thumb1.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img alt="" src="images/media/thumb2.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img alt="" src="images/media/thumb3.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img alt="" src="images/media/thumb4.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img alt="" src="images/media/thumb2.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img alt="" src="images/media/thumb3.jpg"></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div><!-- image product -->
+
+            <div class="product-info-main">
+
+                <h1 class="page-title">
+                    The Name Product Demo
+                </h1>
+
+                <div class="product-reviews-summary">
+                    <div class="rating-summary">
+                        <div class="rating-result" title="70%">
+                            <span style="width:70%">
+                                <span><span>70</span>% of <span>100</span></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="rating-action">
+                        <a href="#">2 Review (s) / Add Your Review</a>
+                    </div>
+                </div>
+                <div class="product-info-price">
+
+                    <div class="price-box">
+                        <span class="old-price">
+                            <span class="price">$20.00</span>
+                        </span>
+                        <span class="special-price">
+                            <span class="price">$15.00</span>
+                        </span>
+
+                    </div>
+
+                    <div class="product-info-stock-sku">
+                        <div class="stock available">
+                            <span class="label">Avaiability: </span>In Stock
+                        </div>
+                    </div>
+                </div>
+                <div class="product-overview">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                </div>
+
+                <div class="product-add-form">
+                    <form>
+
+                        <div class="product-options-wrapper">
+
+                            <div class="form-group">
+                                <label for="forColor">Color <sup>*</sup> </label>
+                                <div class="control">
+                                    <select id="forColor" class="form-control">
+                                        <option>White</option>
+                                        <option>Red</option>
+                                        <option>Blue</option>
+                                        <option>Green</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="forSize">Size <sup>*</sup></label>
+                                <div class="control">
+                                    <select id="forSize" class="form-control">
+                                        <option>39</option>
+                                        <option>30</option>
+                                        <option>32</option>
+                                        <option>36</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="product-options-bottom clearfix">
+                            <div class="form-group form-qty">
+                                <label for="forSize">Qty <sup>*</sup></label>
+                                <div class="control">
+                                    <div class="input-group">
+                                        <span class="input-group-addon qtyminus">-</span>
+                                        <input type="text" class="form-control qty" name='quantity' value='1'>
+                                        <span class="input-group-addon qtyplus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="actions-primary">
+                                    <button type="submit" title="Add to Cart" class="btn btn-default">
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                                <div class="actions-secondary">
+                                    <a href="#" class="action towishlist" title="Wish List">
+                                        <span>Wish List</span>
+                                    </a>
+                                    <a href="#" class="action tocompare" title="Compare">
+                                        <span>Compare</span>
+                                    </a>
+                                    <a href="#" class="action mailto" title="mail">
+                                        <span>mail</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="share">
+                                <img alt="" src="images/media/share.jpg">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div><!-- deatil- product -->
+
+        </div><!-- Main Content -->
+
+        <div class="product-info-detailed">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
+                <li role="presentation"><a href="#reviews" role="tab" data-toggle="tab">Reviews</a></li>
+                <li role="presentation"><a href="#tags" role="tab" data-toggle="tab">Tags</a></li>
+                <li role="presentation"><a href="#video" role="tab" data-toggle="tab">Video</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="reviews">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tags">
+                    <div class="block-tags">
+                        <div class="block-title">
+                            <span class="title">product tags</span>
+                        </div>
+                        <div class="block-content">
+                            <ul>
+                                <li><a href="#">Top</a></li>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Collection Men</a></li>
+                                <li><a href="#">Collection Women</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">New</a></li>
+                                <li><a href="#">Top</a></li>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Collection Men</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="video">...</div>
+            </div>
+
+        </div>
+
+        <div class="block-products products-grid  style4 block-related">
+            <div class="block-title">
+                <strong class="title">RELATED products</strong>
+            </div>
+            <div class="block-content carousel-products ">
+                <ol class="product-items owl-carousel nav-top-right nav-border" data-nav="true" data-dots="false" data-margin="30" data-responsive='{"0":{"items":1},"480":{"items":2},"600":{"items":3},"992":{"items":4}}'>
+
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product1.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                    <span class="product-item-label label-sale">sale</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price-from">
+                                            <span class="price">$61.00</span>
+                                        </span>
+                                        <span class="price-to">
+                                            <span class="price">$77.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product2.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price-from">
+                                            <span class="price">$61.00</span>
+                                        </span>
+                                        <span class="price-to">
+                                            <span class="price">$77.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>select option</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product3.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price">$61.00</span>
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>select option</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product2.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="old-price">
+                                            <span class="price">$20.00</span>
+                                        </span>
+                                        <span class="special-price">
+                                            <span class="price">$15.00</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>select option</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product2.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="old-price">
+                                            <span class="price">$20.00</span>
+                                        </span>
+                                        <span class="special-price">
+                                            <span class="price">$15.00</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>select option</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div><!-- widget -  RELATED -  products -->
+
+        <div class="block-products products-grid  style4 block-upsell">
+            <div class="block-title">
+                <strong class="title">upsell products</strong>
+            </div>
+            <div class="block-content carousel-products ">
+                <ol class="product-items owl-carousel nav-top-right nav-border" data-nav="true" data-dots="false" data-margin="30" data-responsive='{"0":{"items":1},"480":{"items":2},"600":{"items":3},"992":{"items":4}}'>
+
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product1.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                    <span class="product-item-label label-sale">sale</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price-from">
+                                            <span class="price">$61.00</span>
+                                        </span>
+                                        <span class="price-to">
+                                            <span class="price">$77.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product2.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price-from">
+                                            <span class="price">$61.00</span>
+                                        </span>
+                                        <span class="price-to">
+                                            <span class="price">$77.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>select option</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product3.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price">$61.00</span>
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>select option</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product2.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="old-price">
+                                            <span class="price">$20.00</span>
+                                        </span>
+                                        <span class="special-price">
+                                            <span class="price">$15.00</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>select option</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <div class="product-item-info">
+                            <div class="product-item-head">
+                                <a href="#" class="product-item-photo">
+                                    <img alt="The Name Product Demo" src="images/media/product2.jpg" class="product-image-photo">
+                                    <span class="product-item-label label-new">new</span>
+                                </a>
+                                <a href="#" class="action quick-view"><span class="pe-7s-search"></span></a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-category">Men' clothing </a>
+                                <strong class="product-item-name">
+                                    <a href="#" class="product-item-link">The Name Product Demo </a>
+                                </strong>
+                                <div class="product-item-info-price">
+                                    <div class="product-reviews-summary">
+                                        <div class="rating-summary">
+                                            <div class="rating-result" title="70%">
+                                                <span style="width:70%">
+                                                    <span><span>70</span>% of <span>100</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="old-price">
+                                            <span class="price">$20.00</span>
+                                        </span>
+                                        <span class="special-price">
+                                            <span class="price">$15.00</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+                                <div class="product-item-actions">
+                                    <div class="actions-primary">
+                                        <button class="btn btn-default" title="Add to Cart" type="submit">
+                                            <span>select option</span>
+                                        </button>
+                                    </div>
+                                    <div class="actions-secondary">
+                                        <button class="action tocart" title="Add to Cart" type="submit">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                        <a title="Wish List" class="action towishlist" href="#">
+                                            <span>Wish List</span>
+                                        </a>
+                                        <a title="Compare" class="action tocompare" href="#">
+                                            <span>Compare</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div><!-- widget -  upsell -  products -->
+
+    </div>
+
+</div><!-- site-main -->

@@ -1,0 +1,271 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main" class="site-main">
+    <div class="custom-title-wrapper " style="background: url(images/background.jpg);">
+        <div class="container">
+            <div class="page-title-wrapper">
+                <h1 class="page-title">
+                    detail blogs
+                </h1>
+            </div>
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Blogs</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="columns container">
+        <div class="row">
+
+            <div class="col-lg-9   col-md-8  col-main">
+
+
+
+                <div class="list-post">
+                    <ol class="post-items">
+                        <li class="post-item">
+                            <div class="post-item-info">
+                                <a class="post-item-photo" href="#">
+                                    <img class="post-image-photo" src="images/media/post-list1.jpg" alt="Lorem Ipsum Dolor Sit Amet  Consectetur">
+                                </a>
+
+                                <div class="post-item-details">
+                                    <div class="post-item-more">
+                                        <span class="athu">By Admin </span>
+                                        <span class="category">Fashion </span>
+                                        <span class="comment">03 comment  </span>
+                                    </div>
+                                    <span class="post-item-date"><span class="date">20</span>/March</span>
+                                    <strong class="post-item-name">
+                                        <a class="post-item-link" href="#">Lorem Ipsum Dolor Sit Amet  Consectetur</a>
+                                    </strong>
+                                    <div class="post-item-des">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+
+                    </ol><!-- list product -->
+
+                    <div class="actions clearfix">
+                        <a class="action action-prew pull-left" href="#"><i aria-hidden="true" class="fa fa-caret-left"></i>Previous</a>
+                        <a class="action action-next pull-right" href="#">Next<i aria-hidden="true" class="fa fa-caret-right"></i></a>
+                        <div class="social">
+                            <span>share</span>
+                            <a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a>
+                            <a href="#"><i aria-hidden="true" class="fa fa-tumblr"></i></a>
+                            <a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a>
+                            <a href="#"><i aria-hidden="true" class="fa fa-rss"></i></a>
+                            <a href="#"><i aria-hidden="true" class="fa fa-dribbble"></i></a>
+                        </div>
+
+                    </div>
+
+                </div> <!-- List Products -->
+
+                <div class="block-comment-blog">
+                    <div class="list-commnet">
+
+                        <div class="block-title">
+                            <span class="title">Comments  </span>
+                            <span class="count">(2)</span>
+                        </div>
+
+                        <ol class="content">
+                            <li class="item">
+                                <div class="avata">
+                                    <img alt="" src="images/media/user.jpg">
+                                </div>
+                                <div class="detail">
+                                    <div class="clearfix">
+                                        <span class="user">Johny lee</span>
+                                        <span class="date">Sep, 10, 2014  15:37 PM</span>
+                                        <a href="#" class="reply"><i class="fa fa-reply" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type sp </div>
+                                </div>
+                                <ol class="content">
+                                    <li class="item">
+                                        <div class="avata">
+                                            <img alt="" src="images/media/user2.jpg">
+                                        </div>
+                                        <div class="detail">
+                                            <div class="clearfix">
+                                                <span class="user">Johny lee</span>
+                                                <span class="date">Sep, 10, 2014  15:37 PM</span>
+                                                <a href="#" class="reply"><i class="fa fa-reply" aria-hidden="true"></i></a>
+                                            </div>
+                                            <div class="des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type sp </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="avata">
+                                            <img alt="" src="images/media/user.jpg">
+                                        </div>
+                                        <div class="detail">
+                                            <div class="clearfix">
+                                                <span class="user">Johny lee</span>
+                                                <span class="date">Sep, 10, 2014  15:37 PM</span>
+                                                <a href="#" class="reply"><i class="fa fa-reply" aria-hidden="true"></i></a>
+                                            </div>
+                                            <div class="des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type sp </div>
+                                        </div>
+                                    </li>
+                                </ol>
+
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="block-leave-reply">
+                        <div class="block-title">
+                            <span class="title">Leave A Reply</span>
+                            <span>Your email address will not be published. Required fields are m</span>
+                        </div>
+                        <div class="block-content">
+                            <form>
+                                <div class="form-group">
+                                    <label for="forName">Name <sup>*</sup></label>
+                                    <input type="text" placeholder="" id="forName" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email <sup>*</sup></label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="forWebsite">Website </label>
+                                    <input type="text" placeholder="" id="forWebsite" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="forContent">Content <sup>*</sup></label>
+                                    <textarea placeholder="" rows="3" id="forContent" class="form-control"></textarea>
+                                </div>
+
+
+                                <button class="btn btn-inline" type="submit">send massegas</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div><!-- Main Content -->
+
+            <div class="col-lg-3  col-md-4  col-sidebar">
+
+                <div class="block-sidebar block-popular-post">
+
+                    <div class="block-title">
+                        <strong>popular posts</strong>
+                    </div>
+                    <div class="block-content">
+                        <ul class="items">
+                            <li class="item">
+                                <div class="image">
+                                    <a href="#"><img alt="" src="images/media/popular1.jpg"></a>
+                                </div>
+                                <div class="des">
+                                    <div class="value">Online Shopping Fashion Hit New Highs on Mobile Sales</div>
+                                    <span class="date">Jan, 08, 2016</span>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="image">
+                                    <a href="#"><img alt="" src="images/media/popular2.jpg"></a>
+                                </div>
+                                <div class="des">
+                                    <div class="value">Online Shopping Fashion Hit New Highs on Mobile Sales</div>
+                                    <span class="date">Jan, 08, 2016</span>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="image">
+                                    <a href="#"><img alt="" src="images/media/popular3.jpg"></a>
+                                </div>
+                                <div class="des">
+                                    <div class="value">Online Shopping Fashion Hit New Highs on Mobile Sales</div>
+                                    <span class="date">Jan, 08, 2016</span>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div><!-- archives -->
+
+                <div class="block-sidebar block-category">
+                    <div class="block-title">
+                        <strong>categories</strong>
+                    </div>
+                    <div class="block-content">
+                        <ul class="items">
+                            <li>
+                                <a href="#">Entertainment     </a>
+                            </li>
+                            <li>
+                                <a href="#">Lifestyle</a>
+                            </li>
+                            <li>
+                                <a href="#">Painting</a>
+                            </li>
+                            <li>
+                                <a href="#">Photography</a>
+                            </li>
+                            <li>
+                                <a href="#">Technology</a>
+                            </li>
+                            <li>
+                                <a href="#">World</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div><!-- Category -->
+
+                <div class="block-sidebar block-category">
+
+                    <div class="block-title">
+                        <strong>archives</strong>
+                    </div>
+                    <div class="block-content">
+                        <ul class="items">
+                            <li>
+                                <a href="#">August 2015        </a>
+                            </li>
+                            <li>
+                                <a href="#">July 2015</a>
+                            </li>
+                            <li>
+                                <a href="#">June 2015</a>
+                            </li>
+                            <li>
+                                <a href="#">May 2015</a>
+                            </li>
+                            <li>
+                                <a href="#"> April 2015</a>
+                            </li>
+                            <li>
+                                <a href="#">March 2015</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div><!-- archives -->
+
+
+            </div><!-- Sidebar -->
+
+        </div>
+    </div>
+</div><!-- site-main -->

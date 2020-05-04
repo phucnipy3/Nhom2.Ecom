@@ -1,0 +1,244 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main" class="site-main">
+    <div class="custom-title-wrapper " style="background: url(images/background.jpg);">
+        <div class="container">
+            <div class="page-title-wrapper">
+                <h1 class="page-title">
+                    Shopping cart
+                </h1>
+            </div>
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Shopping cart</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="columns container">
+        <div class="clearfix">
+
+            <div class="block-form-cart">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="col item">Product   </th>
+                            <th class="col qty">Quantity </th>
+                            <th class="col unti-price">Unti price  </th>
+                            <th class="col price">Price  </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col item" data-th="Product">
+                                <div class="clearfix item-product">
+                                    <div class="item-photo">
+                                        <a href="#"><img alt="" src="images/media/cart.jpg"></a>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="#" class="item-name">The Nam Products</a>
+                                        <div class="item-type">
+                                            <span>Color: White</span>
+                                            <span>Size: 40</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td class="col qty" data-th="Quantity">
+                                <input type="text" class="form-control " title="Qty" value="1">
+                                <a href="#" class="action-remove">X</a>
+
+                            </td>
+
+                            <td class="col unti-price" data-th="Unti price">
+                                $2000.00
+
+                            </td>
+
+                            <td class="col price" data-th="Price">
+                                $200.00
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col item" data-th="Product">
+                                <div class="clearfix item-product">
+                                    <div class="item-photo">
+                                        <a href="#"><img alt="" src="images/media/cart.jpg"></a>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="#" class="item-name">The Nam Products</a>
+                                        <div class="item-type">
+                                            <span>Color: White</span>
+                                            <span>Size: 40</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td class="col qty" data-th="Quantity">
+                                <input type="text" class="form-control " title="Qty" value="1">
+                                <a href="#" class="action-remove">X</a>
+
+                            </td>
+
+                            <td class="col unti-price" data-th="Unti price">
+                                $2000.00
+
+                            </td>
+
+                            <td class="col price" data-th="Price">
+                                $200.00
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col item" data-th="Product">
+                                <div class="clearfix item-product">
+                                    <div class="item-photo">
+                                        <a href="#"><img alt="" src="images/media/cart.jpg"></a>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="#" class="item-name">The Nam Products</a>
+                                        <div class="item-type">
+                                            <span>Color: White</span>
+                                            <span>Size: 40</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td class="col qty" data-th="Quantity">
+                                <input type="text" class="form-control " title="Qty" value="1">
+                                <a href="#" class="action-remove">X</a>
+
+                            </td>
+
+                            <td class="col unti-price" data-th="Unti price">
+                                $2000.00
+
+                            </td>
+
+                            <td class="col price" data-th="Price">
+                                $200.00
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="block-options-cart">
+
+
+                <!-- Nav tabs -->
+                <div class="block-title">
+                    <ul class="nav nav-pills" role="tablist">
+                        <li role="presentation" class="active"><a href="#tabship" role="tab" data-toggle="tab">estimate shipping & taxe  </a></li>
+                        <li role="presentation"><a href="#tabvoucher" role="tab" data-toggle="tab">use gift voucher</a></li>
+                        <li role="presentation"><a href="#tabcoupon" role="tab" data-toggle="tab">use coupon code</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Tab panes -->
+                <div class="block-content">
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="tabship">
+                            <p class="field note">Enter your destination to get a shipping estimate.</p>
+                            <div class="form-group">
+                                <label for="forContry">Contry <sup>*</sup></label>
+                                <select id="forContry" class="form-control">
+                                    <option>--- Please select ---</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="forRegion">Region / State <sup>*</sup> </label>
+
+                                <select id="forRegion" class="form-control">
+                                    <option>--- Please select ---</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Post Code <sup>*</sup></label>
+                                <input type="text" class="form-control">
+
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-default" type="submit">GET QUOTES</button>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tabvoucher">
+                            <p class="field note">Enter discount code.</p>
+                            <div class="form-group">
+
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-default" type="submit">Apply </button>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tabcoupon">
+                            <p class="field note">Enter discount code.</p>
+                            <div class="form-group">
+
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-default" type="submit">Apply </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="block-cart-totals">
+                <div class="data-totals">
+                    <ul>
+                        <li class="totals">
+                            <span class="label">SubTotal: </span>
+                            <span class="amount">$800.00</span>
+                        </li>
+                        <li class="shipping">
+                            <span class="label">Shipping: </span>
+                            <span class="amount"> $20.00</span>
+                        </li>
+                        <li class="tax">
+                            <span class="label">Tax  (10%):   </span>
+                            <span class="amount"> $80.00</span>
+                        </li>
+                        <li class="grand">
+                            <span class="label">Total:   </span>
+                            <span class="amount">  $900.00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="actions clearfix">
+                    <a href="#" class="btn btn-inline link-shop">continue shopping</a>
+                    <a href="#" class="btn btn-inline link-order">confirm order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div><!-- site-main -->
