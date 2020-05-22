@@ -13,7 +13,7 @@ namespace Nhom2.Ecom.Web
     {
         public static void Main(string[] args)
         {
-            Data.BusinessLogic.BLUser.Exists("a");
+            //Data.BusinessLogic.BLUser.Exists("a");
             CreateHostBuilder(args).Build().Run();
         }
 
